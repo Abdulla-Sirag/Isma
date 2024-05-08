@@ -5,8 +5,10 @@ import 'package:isma/features/authentication/screens/password_configuration/forg
 import 'package:isma/features/authentication/screens/signup/signup.dart';
 import 'package:isma/utils/constants/sizes.dart';
 
+import '../../../../../navigation_menu.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
 
 
 
@@ -17,6 +19,9 @@ class IsmaLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final darkMode = IsmaHelperFunctions.isDarkMode(context);
+
     return Form(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: IsmaSizes.spaceBtwSections),
@@ -63,9 +68,7 @@ class IsmaLoginForm extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {
-                      // Implement Sign In functionality
-                    },
+                    onPressed: () => Get.to(const NavigationMenu()),
                     child: const Text(IsmaTexts.signIn)
                 ),
               ),
@@ -86,7 +89,7 @@ class IsmaLoginForm extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
-                    foregroundColor: IsmaColors.black, // Change the color here
+                    foregroundColor: darkMode ? IsmaColors.white.withOpacity(0.9) : IsmaColors.black, // Change the color here
                   ),
                   child: const Text(IsmaTexts.createAccount),
                 ),

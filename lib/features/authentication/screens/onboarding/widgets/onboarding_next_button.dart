@@ -20,7 +20,7 @@ class OnBoardingNextButton extends StatelessWidget {
       bottom: IsmaDeviceUtils.getBottomNavigationBarHeight() + 8,
       right: IsmaSizes.defaultSpace,
       child: TextButton(onPressed: () => OnBoardingController.instance.nextPage(),
-        style: ElevatedButton.styleFrom(shape: const CircleBorder(), backgroundColor: dark ? IsmaColors.primary : Colors.grey),
+        style: ElevatedButton.styleFrom(shape: const CircleBorder(), backgroundColor: dark ? IsmaColors.primary : Colors.black),
         child: const Icon(Icons.keyboard_arrow_right_outlined ),),);
   }
 }

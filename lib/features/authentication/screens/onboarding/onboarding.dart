@@ -43,7 +43,7 @@ class OnBoardingScreen extends StatelessWidget {
           const OnBoardingSkip(),
 
           /// Dot Navigation Smooth Page Indicator
-          const onBoardingDotNavigation(),
+          const OnBoardingDotNavigation(),
           /// Circular Button
     OnBoardingNextButton(),
         ],
