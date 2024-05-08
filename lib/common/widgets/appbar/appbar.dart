@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:isma/utils/constants/colors.dart';
 import 'package:isma/utils/constants/sizes.dart';
 import 'package:isma/utils/device/device_utility.dart';
 
