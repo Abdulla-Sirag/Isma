@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:isma/utils/constants/colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
