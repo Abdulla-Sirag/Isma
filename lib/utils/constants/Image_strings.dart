@@ -20,4 +20,6 @@ class IsmaImages {
   static const String banner2 = "assets/images/banners/banner2.png";
   static const String banner3 = "assets/images/banners/banner3.png";
 
+  static const String productImage1 = 'assets/images/products/product1.png';
+
 }

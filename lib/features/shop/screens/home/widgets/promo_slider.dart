@@ -34,7 +34,7 @@ class IsmaPromoSlider extends StatelessWidget {
               () => Row(
                 mainAxisSize: MainAxisSize.min,
               children: [
-                for(int i = 0; i < banners.length; i++) IsmaCircularContainer(width: 20, height: 4, margin: EdgeInsets.only(right: 10),
+                for(int i = 0; i < banners.length; i++) IsmaCircularContainer(width: 20, height: 4, margin: const EdgeInsets.only(right: 10),
                   backgroundColor: controller.carousalCurrentIndex.value == i ? IsmaColors.primary : IsmaColors.grey,)
               ],
             ),

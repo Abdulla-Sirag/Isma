@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-
 import '../../../../utils/constants/colors.dart';
 
 class IsmaCircularContainer extends StatelessWidget {
   const IsmaCircularContainer({
-    super.key, this.width = 400, this.height = 400,  this.radius = 400,  this.padding = 0, this.child,  this.backgroundColor = IsmaColors.white, this.margin,
+    super.key,
+    this.width = 400,
+    this.height = 400,
+    this.radius = 400,
+    this.padding = 0,
+    this.child,
+    this.backgroundColor = IsmaColors.white,
+    this.margin,
   });
 
   final double? width;

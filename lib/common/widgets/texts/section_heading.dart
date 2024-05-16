@@ -21,7 +21,8 @@ class IsmaSectionHeading extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        if (showActionButton) TextButton(onPressed: onPressed, child: const Text('buttonTitle'))
+        const Spacer(),
+        if (showActionButton) TextButton(onPressed: onPressed, child: Text(buttonTitle))
 
 
       ],

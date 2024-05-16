@@ -8,12 +8,14 @@ import '../../../../utils/helpers/helper_functions.dart';
 class IsmaSearchContainer extends StatelessWidget {
   const IsmaSearchContainer({
     super.key, required this.text, this.icon = Iconsax.search_normal, this.showBackground = true, this.showBorder = true, this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: IsmaSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +25,12 @@ class IsmaSearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.all(IsmaSizes.md),
+        padding: padding,
         child: Container(
             width: IsmaDeviceUtils.getScreenWidth(context),
             padding: const EdgeInsets.all(IsmaSizes.md),
             decoration: BoxDecoration(
-                color: showBackground ? darkMode ? IsmaColors.dark : IsmaColors.light : Colors.transparent,
+                color: showBackground ? darkMode ? IsmaColors.black : IsmaColors.light : Colors.transparent,
                 border: showBorder ? Border.all(color: IsmaColors.grey) : null,
                 borderRadius: BorderRadius.circular(IsmaSizes.cardRadiusLg)),
             child: Row(
