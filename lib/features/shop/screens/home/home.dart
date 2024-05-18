@@ -3,7 +3,7 @@ import 'package:isma/common/widgets/products/product_cards/product_card_vertical
 import 'package:isma/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:isma/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:isma/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:isma/utils/constants/Image_strings.dart';
+import 'package:isma/utils/constants/image_strings.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
@@ -49,7 +49,10 @@ class HomeScreen extends StatelessWidget {
                     /// -- Categories
                     IsmaHomeCategories(),
                     ],
-                  ),)
+                  ),),
+
+                  SizedBox(height: IsmaSizes.spaceBtwSections),
+
                 ],
               ),
             ),

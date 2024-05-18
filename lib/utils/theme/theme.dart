@@ -13,7 +13,7 @@ import 'package:isma/utils/theme/costum_theme/text_theme.dart';
 class IsmaAppTheme {
   IsmaAppTheme._();
 
-  static ThemeData LightTheme = ThemeData(
+  static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
@@ -30,7 +30,7 @@ class IsmaAppTheme {
 
   );
 
-  static ThemeData DarkTheme = ThemeData(
+  static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.dark,

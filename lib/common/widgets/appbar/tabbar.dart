@@ -22,7 +22,7 @@ class IsmaTabBar extends StatelessWidget implements PreferredSizeWidget {
     final darkMode = IsmaHelperFunctions.isDarkMode(context);
 
     return Container(
-      color: IsmaColors.black,
+      color: darkMode ? IsmaColors.black : IsmaColors.white,
       child: TabBar(
           isScrollable: true,
           indicatorColor: IsmaColors.primary,

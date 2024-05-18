@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:isma/utils/constants/Image_strings.dart';
+import 'package:isma/utils/constants/image_strings.dart';
 import 'package:isma/utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/helpers/helper_functions.dart';

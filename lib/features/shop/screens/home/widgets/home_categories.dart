@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
-import '../../../../../utils/constants/Image_strings.dart';
+import '../../../../../utils/constants/image_strings.dart';
 
 
 class IsmaHomeCategories extends StatelessWidget {

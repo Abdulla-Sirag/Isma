@@ -9,7 +9,7 @@ import 'package:isma/common/widgets/success_screen/success_screen.dart';
 import 'package:isma/features/authentication/screens/login/login.dart';
 import 'package:isma/utils/constants/text_strings.dart';
 
-import '../../../../utils/constants/Image_strings.dart';
+import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 

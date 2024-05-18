@@ -1,8 +1,6 @@
-
-
-
 import 'package:flutter/material.dart';
-import 'package:isma/utils/constants/sizes.dart';
+
+
 
 class IsmaProductPriceText extends StatelessWidget {
   const IsmaProductPriceText({

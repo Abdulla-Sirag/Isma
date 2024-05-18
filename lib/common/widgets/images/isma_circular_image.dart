@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../utils/constants/Image_strings.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/helper_functions.dart';
@@ -19,7 +18,7 @@ class IsmaCircularImage extends StatelessWidget {
 
   final double width, height, padding;
   final String image;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final Color? overlayColor;
   final BoxFit? fit;
   final bool isNetworkImage;
@@ -38,7 +37,7 @@ class IsmaCircularImage extends StatelessWidget {
       child: Center(
         child: Image(
           fit: fit,
-          image: isNetworkImage ? NetworkImage(image) : AssetImage(IsmaImages.google) as ImageProvider,
+          image: isNetworkImage ? NetworkImage(image) : AssetImage(image) as ImageProvider,
           color: overlayColor,
         ),
       ),

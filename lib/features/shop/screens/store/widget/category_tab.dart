@@ -3,7 +3,7 @@ import 'package:isma/common/widgets/layouts/grid_layout.dart';
 import 'package:isma/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:isma/common/widgets/texts/section_heading.dart';
 import '../../../../../common/widgets/products/product_cards/brand_show_case.dart';
-import '../../../../../utils/constants/Image_strings.dart';
+import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 

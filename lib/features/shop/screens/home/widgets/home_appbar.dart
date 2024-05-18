@@ -23,7 +23,6 @@ class IsmaHomeAppBar extends StatelessWidget {
       actions: [
         IsmaCartCounterIcon(onPressed: () {}, ismaColor: IsmaColors.black, isCloredBar: true,)
       ],
-      backgroundColor: Colors.transparent,
       showBackArrow: false,
     );
   }

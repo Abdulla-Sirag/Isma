@@ -5,12 +5,10 @@ import 'package:isma/common/widgets/layouts/grid_layout.dart';
 import 'package:isma/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:isma/common/widgets/texts/section_heading.dart';
 import 'package:isma/features/shop/screens/store/widget/category_tab.dart';
-import 'package:isma/utils/constants/Image_strings.dart';
 import 'package:isma/utils/constants/colors.dart';
 import 'package:isma/utils/constants/sizes.dart';
 import '../../../../common/widgets/appbar/tabbar.dart';
 import '../../../../common/widgets/products/product_cards/brand_card.dart';
-import '../../../../common/widgets/products/product_cards/brand_show_case.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 
 
@@ -60,7 +58,7 @@ class StoreScreen extends StatelessWidget {
 
                     /// -- Brands GRID
                     IsmaGridLayout(itemCount: 4, mainAxisExtent: 80, itemBuilder: (_, index) {
-                      return IsmaBrandCard(showBorder: true,);
+                      return const IsmaBrandCard(showBorder: true,);
                     })
                   ],
                 ),

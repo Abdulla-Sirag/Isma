@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       themeMode: ThemeMode.system,
-      theme: IsmaAppTheme.LightTheme,
-      darkTheme: IsmaAppTheme.DarkTheme,
+      theme: IsmaAppTheme.lightTheme,
+      darkTheme: IsmaAppTheme.darkTheme,
       home: const OnBoardingScreen(),
 
     );
