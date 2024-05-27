@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:isma/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:isma/features/shop/screens/all_products/all_products.dart';
 import 'package:isma/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:isma/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:isma/features/shop/screens/home/widgets/promo_slider.dart';
@@ -67,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                   const IsmaPromoSlider(banners: [IsmaImages.banner1, IsmaImages.banner2, IsmaImages.banner3, ],),
                   const SizedBox(height: IsmaSizes.spaceBtwSections),
 
-                  const IsmaSectionHeading(title: 'Popular Products', showActionButton: true, textColor: IsmaColors.white,),
+                  IsmaSectionHeading(title: 'Popular Products', showActionButton: true, onPressed: () => Get.to(const AllProductsScreen()),),
                   const SizedBox(height: IsmaSizes.spaceBtwItems),
 
                   /// -- Popular Products

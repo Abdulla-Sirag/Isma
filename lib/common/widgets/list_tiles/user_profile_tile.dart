@@ -1,6 +1,8 @@
   import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:isma/common/widgets/images/isma_circular_image.dart';
+import 'package:isma/features/personalization/screens/profile/profile.dart';
 import 'package:isma/utils/constants/image_strings.dart';
 import '../../../../utils/constants/colors.dart';
 
@@ -33,9 +35,7 @@ class IsmaUserProfileTile extends StatelessWidget {
           Iconsax.edit,
           color: IsmaColors.white,
         ),
-        onPressed: () {
-          // Implement Facebook Sign In functionality
-        },
+        onPressed: () => Get.to(const ProfileScreen()),
       ),
     );
   }

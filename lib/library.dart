@@ -5,6 +5,7 @@ import 'package:isma/utils/constants/image_strings.dart';
 import 'package:isma/utils/constants/colors.dart';
 import 'package:isma/utils/constants/sizes.dart';
 import 'package:isma/utils/constants/text_strings.dart';
+import 'package:isma/utils/helpers/helper_functions.dart';
 import 'features/authentication/screens/signup/signup.dart';
 import 'navigation_menu.dart';
 
@@ -14,6 +15,7 @@ class Library extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    final darkMode = IsmaHelperFunctions.isDarkMode(context);
 
     return Column(
       children: [

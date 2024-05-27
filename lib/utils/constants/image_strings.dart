@@ -10,19 +10,37 @@ class IsmaImages {
   static const String google = "assets/logos/google_logo.png";
   static const String facebook = "assets/logos/facebook_logo.png";
 
+
   //-- OnBoarding Images
   static const String onBoardingImage1 = "assets/images/on_boarding_images/isma_onboarding1.png";
   static const String onBoardingImage2 = "assets/images/on_boarding_images/isma_onboarding2.png";
   static const String onBoardingImage3 = "assets/images/on_boarding_images/isma_onboarding3.png";
+
 
   //-- Banners Images
   static const String banner1 = "assets/images/banners/banner1.png";
   static const String banner2 = "assets/images/banners/banner2.png";
   static const String banner3 = "assets/images/banners/banner3.png";
 
+
+  //-- Categories Icons
+  static const String electronics = "assets/icons/categories/pc_icon.png";
+  static const String vehicles = "assets/icons/categories/vehicles_icon.png";
+  static const String home = "assets/icons/categories/home_icon.png";
+  static const String tools = "assets/icons/categories/tools_icon.png";
+  static const String food = "assets/icons/categories/food_icon.png";
+  static const String fashion = "assets/icons/categories/clothes_icon.png";
+  static const String health = "assets/icons/categories/health_icon.png";
+  static const String luggage = "assets/icons/categories/luggage_icon.png";
+  static const String sport = "assets/icons/categories/sport_icon.png";
+  static const String toys = "assets/icons/categories/toys_icon.png";
+  static const String beauty = "assets/icons/categories/beauty_icon.png";
+
+
   //-- Users Images
   static const String user = "assets/images/users/zetaGX.png";
 
-  static const String productImage1 = 'assets/images/products/product1.png';
+  //-- Products Images
+  static const String productImage1 = 'assets/images/products/product2.png';
 
 }

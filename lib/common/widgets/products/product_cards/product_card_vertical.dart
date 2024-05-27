@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:isma/common/styles/shadows.dart';
 import 'package:isma/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:isma/common/widgets/images/isma_rounded_image.dart';
+import 'package:isma/features/shop/screens/product_details/product_detail.dart';
 import 'package:isma/utils/constants/image_strings.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -20,7 +22,7 @@ class IsmaProductCardVertical extends StatelessWidget {
     final darkMode = IsmaHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
