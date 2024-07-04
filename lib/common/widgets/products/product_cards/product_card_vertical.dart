@@ -22,7 +22,7 @@ class IsmaProductCardVertical extends StatelessWidget {
     final darkMode = IsmaHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () => Get.to(const ProductDetail()),
+      onTap: () => Get.to(() => const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

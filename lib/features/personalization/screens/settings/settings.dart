@@ -5,6 +5,7 @@ import 'package:isma/common/widgets/custom_shapes/containers/primary_header_cont
 import 'package:isma/common/widgets/texts/section_heading.dart';
 import '../../../../common/widgets/list_tiles/settings_menu_tile.dart';
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
+import '../../../../data/reopsitories/authentication/authentication_repository.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
@@ -99,7 +100,7 @@ class SettingsScreen extends StatelessWidget {
                   ),),
 
 
-                  onPressed: () {},
+                  onPressed: () => AuthenticationRepository.instance.logout(),
                   child: Text('Logout', style: TextStyle(color: darkMode ? IsmaColors.white : IsmaColors.black,),),
                 ),),
                   const SizedBox(height: IsmaSizes.spaceBtwSections * 2.5),

@@ -43,4 +43,9 @@ class IsmaImages {
   //-- Products Images
   static const String productImage1 = 'assets/images/products/product2.png';
 
+  //-- Animations
+  static String decorAnimation = 'assets/images/animations/paper_jet_loading.json';
+  static String successfulRegisteration = 'assets/images/animations/successful_registeration.json';
+
+
 }

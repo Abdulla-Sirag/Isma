@@ -1,4 +1,13 @@
 ﻿class IsmaValidator {
+
+  static String? validateEmptyText(String? fileName ,String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fileName is required.';
+    }
+
+    return null;
+  }
+
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is required.';

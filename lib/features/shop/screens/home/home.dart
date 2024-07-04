@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                   const IsmaPromoSlider(banners: [IsmaImages.banner1, IsmaImages.banner2, IsmaImages.banner3, ],),
                   const SizedBox(height: IsmaSizes.spaceBtwSections),
 
-                  IsmaSectionHeading(title: 'Popular Products', showActionButton: true, onPressed: () => Get.to(const AllProductsScreen()),),
+                  IsmaSectionHeading(title: 'Popular Products', showActionButton: true, onPressed: () => Get.to(() => const AllProductsScreen()),),
                   const SizedBox(height: IsmaSizes.spaceBtwItems),
 
                   /// -- Popular Products

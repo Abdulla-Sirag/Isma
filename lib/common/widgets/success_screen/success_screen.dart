@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/constants/text_strings.dart';
-import '../../../utils/helpers/helper_functions.dart';
 import '../../styles/ispacing_styles.dart';
 
 class SuccessScreen extends StatelessWidget {
@@ -17,14 +17,10 @@ class SuccessScreen extends StatelessWidget {
         child: Padding(
           padding:  IsmaSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               /// Image
-              Image(
-                width: IsmaHelperFunctions.screenWidth() * 0.6 ,
-                image: AssetImage(image),
-              ),
+              Lottie.asset(image, width: MediaQuery.of(context).size.width * 0.6), // Display Lottie animation
               const SizedBox (height: IsmaSizes.spaceBtwSections),
 
               /// Title & SubTitle

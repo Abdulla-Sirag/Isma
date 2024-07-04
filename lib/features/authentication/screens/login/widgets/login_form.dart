@@ -8,6 +8,8 @@ import '../../../../../navigation_menu.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
+import '../../../../../utils/validators/validation.dart';
+import '../../../controllers/login/login_controller.dart';
 
 
 
@@ -18,18 +20,20 @@ class IsmaLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    final controller = Get.put(LoginController());
     final darkMode = IsmaHelperFunctions.isDarkMode(context);
 
     return Form(
+        key: controller.loginFormKey,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: IsmaSizes.spaceBtwSections),
           child: Column(
             children: [
 
-
-              /// Text Form Field
+              /// Email
               TextFormField(
+                controller: controller.email,
+                validator: (value) => IsmaValidator.validateEmail(value),
                 decoration: const InputDecoration(
                   labelText: IsmaTexts.email,
                   prefixIcon: Icon(Iconsax.direct_right,
@@ -37,12 +41,23 @@ class IsmaLoginForm extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: IsmaSizes.spaceBtwInputFields),
-              TextFormField(
-                decoration: const InputDecoration(
+
+              /// Password
+              Obx(
+                    () => TextFormField(
+                  controller: controller.password,
+                  validator: (value) => IsmaValidator.validateEmptyText('Password' ,value),
+                  obscureText: controller.hidePassword.value,
+                  decoration: InputDecoration(
                     labelText: IsmaTexts.password,
-                    prefixIcon: Icon(Iconsax.password_check,
+                    prefixIcon: Icon(
+                      Iconsax.password_check,
                     ),
-                    suffixIcon: Icon(Iconsax.eye_slash)
+                    suffixIcon: IconButton(
+                      onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                      icon: Icon(controller.hidePassword.value
+                          ? Iconsax.eye_slash
+                          : Iconsax.eye),),),
                 ),
               ),
               const SizedBox(height: IsmaSizes.spaceBtwInputFields / 2),
@@ -51,11 +66,12 @@ class IsmaLoginForm extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Checkbox(value: true, onChanged: (value) {}),
+                  Obx (() => Checkbox(value: controller.rememberMe.value,
+                      onChanged: (value) => controller.rememberMe.value = !controller.rememberMe.value),),
                   const Text(IsmaTexts.rememberMe),
                   const Spacer(),
                   TextButton(
-                    onPressed: () => Get.to(const ForgetPassword()),
+                    onPressed: () => Get.to(() => const ForgetPassword()),
                     child: const Text(IsmaTexts.forgetPassword),
                   ),
                 ],
@@ -67,7 +83,7 @@ class IsmaLoginForm extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => Get.to(const NavigationMenu()),
+                    onPressed: () => controller.emailAndPasswordSignIn(),
                     child: const Text(IsmaTexts.signIn)
                 ),
               ),
@@ -78,7 +94,7 @@ class IsmaLoginForm extends StatelessWidget {
                 width: double.infinity,
                 height: 52,
                 child: OutlinedButton(
-                  onPressed: () => Get.to(const SignupScreen()),
+                  onPressed: () => Get.to(() => const SignupScreen()),
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12), // Adjust the radius as needed

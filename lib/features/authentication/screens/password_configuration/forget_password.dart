@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:isma/features/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:isma/features/authentication/screens/password_configuration/reset_password.dart';
+import 'package:isma/utils/validators/validation.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/text_strings.dart';
 
@@ -10,6 +12,8 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -27,10 +31,15 @@ class ForgetPassword extends StatelessWidget {
               const SizedBox (height: IsmaSizes.spaceBtwSections * 2),
 
               /// Text Field
-              TextFormField(
-                decoration: const InputDecoration(
-                  labelText: IsmaTexts.email,
-                  prefixIcon: Icon(Iconsax.direct_right,
+              Form(
+                key:  controller.forgetPasswordFormKey,
+                child: TextFormField(
+                  controller: controller.email,
+                  validator: IsmaValidator.validateEmail,
+                  decoration: const InputDecoration(
+                    labelText: IsmaTexts.email,
+                    prefixIcon: Icon(Iconsax.direct_right,
+                    ),
                   ),
                 ),
               ),
@@ -39,7 +48,7 @@ class ForgetPassword extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => Get.offAll(const ResetPassword()),
+                    onPressed: () => controller.sendPasswordResetEmail(),
                     child: const Text(IsmaTexts.submit)
                 ),
               ),

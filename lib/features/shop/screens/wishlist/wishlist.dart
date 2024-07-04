@@ -26,7 +26,7 @@ class FavouriteScreen extends StatelessWidget {
       appBar: IsmaAppBar(
         title: Text ('Wishlist', style: Theme.of(context).textTheme.headlineMedium,),
         actions: [
-          IsmaCircularIcon(icon: Iconsax.add, onPressed: () => Get.to(const HomeScreen()),)
+          IsmaCircularIcon(icon: Iconsax.add, onPressed: () => Get.to(() => const HomeScreen()),)
         ],
       ),
       body: SingleChildScrollView(

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "912363488883",
+    "project_id": "isma-df08a",
+    "storage_bucket": "isma-df08a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912363488883:android:ded9c25aab278595eb0c06",
+        "android_client_info": {
+          "package_name": "com.jakrta.isma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912363488883-q42j9sktghm7ih417462v25m7m1naq2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jakrta.isma",
+            "certificate_hash": "6da527415dbbc94100c9cd297cc6a427e3d8bdb3"
+          }
+        },
+        {
+          "client_id": "912363488883-oaq3ki8o7nigooqmj1pm60hiajp5gjeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB22m6CvZzHEWm7kPUxPwJlhm3yrDuwuV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912363488883-oaq3ki8o7nigooqmj1pm60hiajp5gjeq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "912363488883-r29pbeh3kgusqp9ru0jeqgmc2m080s4o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jakrta.isma"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

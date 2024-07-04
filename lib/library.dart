@@ -40,7 +40,7 @@ class Library extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-              onPressed: () => Get.to(const NavigationMenu()),
+              onPressed: () => Get.to(() => const NavigationMenu()),
               child: const Text(IsmaTexts.signIn)
           ),
         ),
@@ -50,7 +50,7 @@ class Library extends StatelessWidget {
           width: double.infinity,
           height: 52,
           child: OutlinedButton(
-            onPressed: () => Get.to(const SignupScreen()),
+            onPressed: () => Get.to(() => const SignupScreen()),
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12), // Adjust the radius as needed

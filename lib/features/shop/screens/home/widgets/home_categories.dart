@@ -34,7 +34,7 @@ class IsmaHomeCategories extends StatelessWidget {
           return IsmaVerticalImageText(
             title: categories[index]['title']!,
             image: categories[index]['image']!,
-            onTap: () => Get.to(const SubCategoriesScreen()),
+            onTap: () => Get.to(() => const SubCategoriesScreen()),
           );
         },
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:isma/features/authentication/controllers/login/login_controller.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
@@ -11,6 +12,7 @@ class IsmaSocialButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -23,9 +25,7 @@ class IsmaSocialButtons extends StatelessWidget {
               height: IsmaSizes.iconMd,
               image: AssetImage(IsmaImages.google),
             ),
-            onPressed: () {
-              // Implement Facebook Sign In functionality
-            },
+            onPressed: () => controller.googleSignIn(),
           ),
         ),
         const SizedBox(width: IsmaSizes.spaceBtwItems),

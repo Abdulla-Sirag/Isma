@@ -35,7 +35,7 @@ class IsmaUserProfileTile extends StatelessWidget {
           Iconsax.edit,
           color: IsmaColors.white,
         ),
-        onPressed: () => Get.to(const ProfileScreen()),
+        onPressed: () => Get.to(() => const ProfileScreen()),
       ),
     );
   }
